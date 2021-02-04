@@ -75,7 +75,7 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '⌛ Sedang di Prosess ⌛',
+				wait: '*[WAIT]* Sedang di Prosess',
 				success: '✔️ Berhasil ✔️',
 				error: {
 					stick: '❌ Gagal, terjadi kesalahan saat mengkonversi gambar ke sticker ❌',
@@ -91,7 +91,7 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6285892766102@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["6281261664016@s.whatsapp.net"] // replace this with your number
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
