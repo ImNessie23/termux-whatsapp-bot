@@ -6,15 +6,36 @@ const {
     Mimetype,
     GroupSettingChange
 } = require('@adiwajshing/baileys')
+
+//js file
 const { color, bgcolor } = require('./lib/color')
 const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
+const { help } = require('./src/menu/help')
+
+//npm package
 const fs = require('fs')
 const moment = require('moment-timezone')
 const { exec } = require('child_process')
 const fetch = require('node-fetch')
 const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
+
+//json file
+/*const setting = JSON.parse(fs.readFileSync('./src/json/settings/option.json'))
+
+//settings
+const {
+    botName,
+    ownerName,
+    ownerNumber
+} = setting
+const ownerNumber = [ownerNumber]*/
+
+const ownerNumber = ["6281261664016@s.whatsapp.net"] // replace this with your number
+const botName = 'NessieBOT' // replace this with your bot name
+const ownerName = 'Aditya' // replace this with your name
+
 prefix = '!'
 blocked = []
 
@@ -91,7 +112,6 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6281261664016@s.whatsapp.net"] // replace this with your number
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
