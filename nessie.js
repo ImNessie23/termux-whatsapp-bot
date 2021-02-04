@@ -145,6 +145,16 @@ async function starts() {
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXECUTE\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECEIVE\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
                         switch(command) {
+                                case 'help':
+                                        client.sendMessage(from, help(pushname, prefix, botName, ownerName), text)
+                                        break
+                                case 'info':
+					me = client.user
+					uptime = process.uptime()
+					teks = `➽ *Bot Name* : ${me.name}\n➽ *Bot Number* : @${me.jid.split('@')[0]}\n➽ *Prefix* : ${prefix}\n➽ *Total Block* : ${blocked.length}\n➽ *Active Since* : ${kyun(uptime)}`
+					buffer = await getBuffer(me.imgUrl)
+					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
+					break
 				default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
@@ -152,7 +162,7 @@ async function starts() {
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						return //console.log(color('[UNREGISTERED COMMAND]','yellow'), 'Unregistered Command from', color(sender.split('@')[0]))
+					        return //console.log(color('[UNREGISTERED COMMAND]','yellow'), 'Unregistered Command from', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
