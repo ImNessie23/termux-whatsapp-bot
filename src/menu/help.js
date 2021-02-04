@@ -12,6 +12,11 @@ const help = (pushname, prefix, botName, ownerName) => {
 ╠════════════════════
 ╠≽ ${prefix}info
 ╠≽ ${prefix}blocklist
+╠≽ ${prefix}owner
+╠≽ ${prefix}creator
+╠════════════════════
+║──────〘  *MAKER* 〙──────
+╠════════════════════
 `
 }
 exports.help = help
