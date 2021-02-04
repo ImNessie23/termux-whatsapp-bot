@@ -36,6 +36,13 @@ const ownerNumber = ["6281261664016@s.whatsapp.net"] // replace this with your n
 const botName = 'NessieBOT' // replace this with your bot name
 const ownerName = 'Aditya' // replace this with your name
 
+//vcard settings
++ 'VERSION:3.0\n'
+            + 'FN:Aditya\n' // full name
+            + 'ORG:Owner ${botName};\n' // the organization of the contact
+            + 'TEL;type=CELL;type=VOICE;waid=12542123926:+1 (254) 212-3926\n' // WhatsApp ID + phone number
+            + 'END:VCARD'
+
 prefix = '!'
 blocked = []
 
