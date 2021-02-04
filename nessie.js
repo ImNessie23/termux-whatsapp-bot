@@ -170,6 +170,11 @@ async function starts() {
 					teks += `➽ *Total* : ${blocked.length}`
 					client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": blocked}})
 					break
+                                case 'owner':
+                                case 'creator':
+                                        client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
+                                        client.sendMessage(from, 'Nih nomor ownerku kak, save ya kak nanti di save balik',MessageType.text, {                        >
+                                        break
 				default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
