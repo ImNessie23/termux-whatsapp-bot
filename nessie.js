@@ -174,7 +174,7 @@ async function starts() {
                                 case 'owner':
                                 case 'creator':
                                         client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-                                        client.sendMessage(from, 'Nih nomor ownerku kak, save ya kak nanti di save balik',MessageType.text, {                        >
+                                        client.sendMessage(from, 'Nih nomor ownerku kak, save ya kak nanti di save balik',MessageType.text, {quoted:mek})
                                         break
 				default:
 					if (isGroup && isSimi && budy != undefined) {
