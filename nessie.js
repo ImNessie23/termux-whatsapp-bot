@@ -30,8 +30,9 @@ const {
     ownerName,
     ownerNumber
 } = setting
-const ownerNumber = [ownerNumber]*/
+const ownerNumber = [ownerNumber]
 
+const BarBarKey = 'YOUR_APIKEY' // replace this with mhankbarbar apikey*/
 const ownerNumber = ["6281261664016@s.whatsapp.net"] // replace this with your number
 const botName = 'NessieBOT' // replace this with your bot name
 const ownerName = 'Aditya' // replace this with your name
